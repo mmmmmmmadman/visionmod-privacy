@@ -8,28 +8,63 @@
 body { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; max-width: 640px; margin: 4rem auto; padding: 0 1.5rem; line-height: 1.6; color: #222; }
 h1 { font-size: 1.5rem; font-weight: 600; }
 h2 { font-size: 1.1rem; font-weight: 600; margin-top: 2rem; }
+code { font-size: 0.9em; word-break: break-all; }
 footer { margin-top: 3rem; font-size: 0.85rem; color: #777; }
 a { color: #d1543f; }
 </style>
 </head>
 <body>
 <h1>Vision MOD Privacy Policy</h1>
-<p>Effective date: September 24, 2026</p>
+<p>Effective date: November 18, 2026</p>
+<p>This policy applies to Vision MOD for macOS (Mac App Store) and Windows (Microsoft Store).</p>
 
 <h2>Data Collection</h2>
-<p>Vision MOD does not collect, store, or transmit any personal data. The app contains no analytics, no advertising and no tracking. The only network activity is the App Store purchase and restore flow, which is handled by Apple.</p>
+<p>Vision MOD does not collect personal data. The app has no user accounts, no analytics, no advertising, no tracking and no crash reporting. It does not send camera images, audio, MIDI data, settings, recordings or any other content to MADZINE or to any server.</p>
 
-<h2>Camera and Microphone</h2>
-<p>Vision MOD requests camera access to use the camera image as its visual source, and microphone or audio input access to use audio levels as modulation. Both are processed in real time on the device. Nothing is recorded or sent anywhere.</p>
+<h2>Network Activity</h2>
+<p>The only network activity of the app is the in-app purchase and restore flow, which is handled by Apple (App Store) on macOS and by Microsoft (Microsoft Store) on Windows. On macOS the app has no network access permission of its own.</p>
+
+<h2>Online Manual</h2>
+<p>The MANUAL button opens the user manual in your default web browser at an address of the form <code>https://madzine.work/assets/manuals/visionmod/VisionMOD_Manual_&lt;version&gt;_&lt;language&gt;.html</code>. The address contains the app version and the current interface language (en, ja or zh-Hant). This happens only when you press the button. The connection is made by your browser, not by Vision MOD, and Vision MOD adds no other data to it.</p>
+
+<h2>Camera, Microphone and MIDI</h2>
+<p>Vision MOD requests camera access to use the camera image as its visual source, and microphone or audio input access to use audio levels as modulation and to pass audio input through the built-in audio effects. MIDI Control Change messages from connected MIDI devices control app parameters. All of this is processed in real time on your computer and is not uploaded. Microphone and audio input are never recorded.</p>
+<p>You can turn off camera and microphone access at any time: on macOS in System Settings &gt; Privacy &amp; Security &gt; Camera / Microphone, on Windows in Settings &gt; Privacy &amp; security &gt; Camera / Microphone.</p>
+
+<h2>Video Recording</h2>
+<p>When you use the record function, Vision MOD saves a video file of the output image, together with the sound of a video file you play as a source (if any), to the location you choose in the save dialog. Microphone and audio input are not included. Recordings are not uploaded and stay where you saved them.</p>
 
 <h2>AI Processing</h2>
-<p>All image generation runs locally on your Mac. No image is uploaded to any server.</p>
+<p>Image generation (Stable Diffusion on macOS, Stream Diffusion on Windows) and the app's other AI processing run locally on your computer. No image is uploaded to any server.</p>
 
 <h2>Local Files</h2>
-<p>Settings, presets and any recordings you make are stored on your device and never leave it unless you export them yourself.</p>
+<p>Vision MOD stores the following on your computer only. On the Mac App Store version, all of these locations are inside the app's sandbox container.</p>
+<ul>
+<li>Settings and module state: <code>.visionmod/app_state.json</code> in your user folder. This file contains the names of the camera, audio and MIDI devices you selected and the file paths of media files you chose.</li>
+<li>MIDI assignments: <code>.visionmod/midi_mappings.json</code> in your user folder.</li>
+<li>Visual effect plug-ins: <code>.visionmod/plugins/</code> in your user folder.</li>
+<li>Color settings: <code>.config/visionmod/hue.txt</code> and <code>.config/visionmod/saturation.txt</code> in your user folder.</li>
+<li>macOS only, in <code>~/Library/Application Support/VisionMod/</code>: <code>store_unlock.cache</code> (records only that the purchase is active), <code>sandbox_bookmarks.json</code> (keeps access permission to files you selected) and <code>instance.lock</code> (prevents the app from opening twice).</li>
+<li>Windows only: <code>VisionMod\instance.lock</code> in your local application data folder (prevents the app from opening twice).</li>
+<li>Temporary files in the <code>visionmod</code> folder of the system temporary folder, used to pass camera and video frames and processing results between the app's own processes. They are emptied the next time the app starts.</li>
+<li>Recordings and project files, only when you save them yourself, at the location you choose.</li>
+</ul>
+<p>None of this data leaves your computer unless you copy or share it yourself.</p>
+
+<h2>Project Files</h2>
+<p>Project files you save or export contain the full file paths of the media files used in the project and the names of the selected devices. A file path can include your account folder name. Please keep this in mind before sharing a project file.</p>
 
 <h2>Third Parties</h2>
-<p>Vision MOD shares no data with third parties, because it collects none.</p>
+<p>In-app purchases are handled by Apple on macOS and by Microsoft on Windows. Vision MOD only uses whether the purchase is active. Payment information is handled by Apple or Microsoft and is never available to MADZINE. Apart from this, Vision MOD shares no data with third parties, because it collects none.</p>
+
+<h2>User Control</h2>
+<p>Camera and microphone access can be revoked in the system settings listed above. Devices can be deselected inside the app at any time. To delete saved settings, MIDI assignments, plug-ins and color settings, delete the <code>.visionmod</code> and <code>.config/visionmod</code> folders in your user folder (on the Mac App Store version, inside the app's sandbox container).</p>
+
+<h2>Children's Privacy</h2>
+<p>Vision MOD does not collect personal data from anyone, including children under 13.</p>
+
+<h2>Changes to This Policy</h2>
+<p>If this policy changes, the updated version will be published at this address with a new effective date.</p>
 
 <h2>Contact</h2>
 <p>Questions about this policy: <a href="mailto:mmmmmmmadman@gmail.com">mmmmmmmadman@gmail.com</a></p>
